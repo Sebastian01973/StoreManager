@@ -3,6 +3,7 @@ package controller;
 import models.Item;
 import models.ManageStores;
 import models.Store;
+import persistence.JsonFileManager;
 import utilities.UtilitiesView;
 import view.Constant;
 import view.JFMainWindow;
@@ -33,6 +34,7 @@ public class Controller implements ActionListener , MouseListener {
         manageStores.addItemToStore("cra2",1,"papel",10,1000);
         manageStores.addItemToStore("cra3",1,"papel",10,1000);
         addListToTable(manageStores.getMatrixList(),Constant.MAIN_HEADERS);
+        readDatas();
     }
 
     public void addElementToTable(Object[] vector){
@@ -46,7 +48,6 @@ public class Controller implements ActionListener , MouseListener {
                 break;
             case CREATE_STORE:
                 addStore();
-                showDialog(false);
                 break;
             case CANCEL_CREATE_STORE:
                 showDialog(false);
@@ -103,8 +104,14 @@ public class Controller implements ActionListener , MouseListener {
 
     private void addStore(){
         Store store = (Store) jfMainWindow.createStore();
-        manageStores.addStore(store);
-        addElementToTable(store.toObjectVector());
+        if (store != null){
+            manageStores.addStore(store);
+            addElementToTable(store.toObjectVector());
+            showDialog(false);
+        }else {
+            showMessageDialog(null,"Datos vacios");
+            showDialog(true);
+        }
     }
 
     private void addItemToStore(){
@@ -197,6 +204,18 @@ public class Controller implements ActionListener , MouseListener {
             jfMainWindow.setNumberitems(store.getNumberItems());
         }
         jfMainWindow.showButtons(true);
+    }
+
+    public void readDatas(){
+        JsonFileManager jsonFileManager = new JsonFileManager();
+        ArrayList<Object[]> datas = jsonFileManager.readFile("Names.json");
+        for (int i = 0; i < 20; i++) {
+            Object[] obj = datas.get(i);
+            Store store = manageStores.createStore(String.valueOf(obj[0]),
+                    String.valueOf(obj[1]));
+                manageStores.addStore(store);
+            jfMainWindow.addRowTable(store.toObjectVector());
+        }
     }
 
     @Override

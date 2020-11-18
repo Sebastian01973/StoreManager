@@ -76,8 +76,10 @@ public class JPFooter extends JPanel {
 
     public int[] getDeleteString(){
         String[] auxSplit = textDelete.getText().split("-");
-        if (auxSplit.length <= 2 && !auxSplit[0].isEmpty()){
-            return new int[]{Integer.parseInt(auxSplit[0]),Integer.parseInt(auxSplit[1])};
+        if (auxSplit.length > 1){
+            if (auxSplit.length <= 2 && !auxSplit[0].isEmpty()){
+                return new int[]{Integer.parseInt(auxSplit[0]),Integer.parseInt(auxSplit[1])};
+            }
         }
         textDelete.setText("");
         return null;

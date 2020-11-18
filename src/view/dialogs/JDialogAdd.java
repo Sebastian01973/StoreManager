@@ -71,7 +71,10 @@ public class JDialogAdd extends JDialog {
     }
 
     public Store getNewStore(){
-        return new Store(jTname.getText(),jTAddress.getText());
+        if (!(jTname.getText().isEmpty() || jTAddress.getText().isEmpty())){
+            return new Store(jTname.getText(),jTAddress.getText());
+        }
+        return null;
     }
 
 
