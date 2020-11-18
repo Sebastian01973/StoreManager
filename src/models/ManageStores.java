@@ -1,5 +1,6 @@
 package models;
-import structures.SimpleList;
+import models.comparators.StoreComparator;
+import structures.simpleList.SimpleList;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,6 +1,7 @@
 package models;
 
-import structures.DoubleList;
+import models.comparators.ItemComparator;
+import structures.doublyList.DoubleList;
 
 import java.util.ArrayList;
 import java.util.Iterator;

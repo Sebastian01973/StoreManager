@@ -1,4 +1,4 @@
-package structures;
+package structures.doublyList;
 
 public class DoubleNode<T>{
     private DoubleNode previous, next;

@@ -1,4 +1,4 @@
-package structures;
+package structures.doublyList;
 
 import java.util.Comparator;
 import java.util.Iterator;

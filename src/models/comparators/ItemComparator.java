@@ -1,4 +1,6 @@
-package models;
+package models.comparators;
+
+import models.Item;
 
 import java.util.Comparator;
 

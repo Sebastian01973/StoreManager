@@ -1,4 +1,4 @@
-package structures;
+package structures.simpleList;
 
 public class Node <T>{
     private T data;

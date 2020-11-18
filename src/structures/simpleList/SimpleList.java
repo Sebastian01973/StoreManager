@@ -1,4 +1,4 @@
-package structures;
+package structures.simpleList;
 
 import java.util.Comparator;
 import java.util.Iterator;

@@ -1,9 +1,6 @@
 package test;
 
-import models.Item;
-import models.ItemComparator;
 import models.Store;
-import structures.DoubleList;
 
 public class TestStore {
     public static void main(String[] args) {
