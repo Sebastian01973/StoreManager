@@ -40,6 +40,11 @@ public class ManageStores {
         return null;
     }
 
+    public boolean removeRange(int start,int end,String address){
+        Store aux = searchStore(address);
+        return (aux != null) ? aux.removeInRange(start,end):false;
+    }
+
     public void addItemToStore(String address,int code,String name,int quantity,double unitValue){
         Store aux = searchStore(address);
         if (aux != null){

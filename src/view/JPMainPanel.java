@@ -76,4 +76,12 @@ public class JPMainPanel extends JPanel {
     public void setNumberitems(int value){
         jpHeader.setNumberitems(value);
     }
+
+    public int[] getDeleteString(){
+        return jpFooter.getDeleteString();
+    }
+
+    public void setVisibleDelete(boolean visible){
+        jpFooter.setVisibleDelete(visible);
+    }
 }

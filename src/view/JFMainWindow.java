@@ -110,4 +110,12 @@ public class JFMainWindow extends JFrame {
     public void setNumberitems(int value){
         jpMainPanel.setNumberitems(value);
     }
+
+    public int[] getDeleteString(){
+        return jpMainPanel.getDeleteString();
+    }
+
+    public void setVisibleDelete(boolean visible){
+        jpMainPanel.setVisibleDelete(visible);
+    }
 }

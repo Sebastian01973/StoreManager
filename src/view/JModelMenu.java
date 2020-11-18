@@ -42,7 +42,11 @@ public class JModelMenu extends JMenuBar {
         backItem.addActionListener(action);
         backItem.setActionCommand(Command.BACK.toString());
         this.add(backItem);
+
+
     }
+
+
 
     public void setVisibleButton(boolean visibility){
         addItem.setVisible(visibility);

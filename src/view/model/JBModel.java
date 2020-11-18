@@ -16,6 +16,32 @@ public class JBModel extends JButton {
         this.addActionListener(action);
     }
 
+    public JBModel(String text,String imagePath,Font font,int width,int height, Color...colors) {
+        super(text);
+        this.setFont( font );
+        ImageIcon imagen = new ImageIcon(getClass().getResource(imagePath));
+        Icon icon = new ImageIcon(imagen.getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH));
+        this.setIcon(icon);
+        this.setBorderPainted( false );
+        this.setFocusable( false );
+        this.setOpaque(false);
+        this.setHorizontalTextPosition( SwingConstants.CENTER );
+        this.setVerticalTextPosition( SwingConstants.BOTTOM );
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        this.setBackground(colors[0]);
+        this.setForeground(colors[1]);
+    }
+
+    public JBModel(String imagePath,int width,int height) {
+        ImageIcon imagen = new ImageIcon(getClass().getResource(imagePath));
+        Icon icon = new ImageIcon(imagen.getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH));
+        this.setIcon(icon);
+        this.setBorderPainted( false );
+        this.setFocusable( false );
+        this.setOpaque(false);
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }
+
     public JBModel( int arcW, int arcH, String text, Color codeColorBackground, Color codeColorForeground, String command, ActionListener listener) {
         super( text );
         this.arcW = arcW;

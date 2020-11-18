@@ -7,6 +7,7 @@ import utilities.UtilitiesView;
 import view.Constant;
 import view.JFMainWindow;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -76,8 +77,27 @@ public class Controller implements ActionListener , MouseListener {
             case TO_SELL:
                 sellItem();
                 break;
+            case DELETE_RANG_ITEM: this.deleteRange(); break;
+            case SHOW_DELETE: this.showDelete(); break;
             default:
                 break;
+        }
+    }
+
+    private void showDelete() {
+        jfMainWindow.setVisibleDelete(true);
+    }
+
+    private void deleteRange() {
+        int[] auxInts = jfMainWindow.getDeleteString();
+        if (auxInts != null){
+            if (manageStores.removeRange(auxInts[0],auxInts[1],jfMainWindow.getAddressStore())){
+                refreshTable();
+            }else{
+                JOptionPane.showMessageDialog(null,"No existen esos codigos");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null,"No hay datos o forma incorrecta");
         }
     }
 
@@ -101,7 +121,8 @@ public class Controller implements ActionListener , MouseListener {
                 jfMainWindow.showDialogAddItem(true,false);
             }
         }else{
-            showMessageDialog(null, "Hay datos Vacios por favor llenarlos todos");
+            showMessageDialog(null, "Hay datos Vacios por favor llenarlos todos" +
+                    " o los valores numericos exceden nuestra capacidad.");
             jfMainWindow.showDialogAddItem(true,true);
         }
     }
@@ -119,6 +140,7 @@ public class Controller implements ActionListener , MouseListener {
 
     private void sellItems(){
         jfMainWindow.setVisibleSell(true);
+        jfMainWindow.setVisibleDelete(false);
         Store store = searchStore(jfMainWindow.getAddressStore());
         jfMainWindow.fillListItem(store.getItemslist());
     }
@@ -159,6 +181,8 @@ public class Controller implements ActionListener , MouseListener {
         Store store = searchStore(jfMainWindow.getAddressStore());
         if(store != null){
             addListToTable(store.getItemlist(),Constant.STORE_HEADERS);
+            jfMainWindow.setVisibleSell(false);
+            jfMainWindow.setVisibleDelete(false);
         }
     }
 

@@ -41,7 +41,7 @@ public class JDAddItem extends JDialog {
         jTName.validateText(jTName);
         container.add(jTName);
 
-        jtFUnitValue = new JModelTextField("Valor por unidad","Ingrese Unidades",Constant.FONT_ARIAL_ROUNDER_15,Constant.C_WHITE);
+        jtFUnitValue = new JModelTextField("Valor por unidad","Ingrese Valor",Constant.FONT_ARIAL_ROUNDER_15,Constant.C_WHITE);
         jtFUnitValue.validateNum(jtFUnitValue);
         container.add(jtFUnitValue);
 
@@ -92,12 +92,14 @@ public class JDAddItem extends JDialog {
 
     public Item createItem(){
         if (!isValidate(jTName.getText(),jtFCode.getText(),jtFUnitValue.getText(),jtfQuantity.getText())){
-            return new Item(Integer.parseInt(jtFCode.getText()),jTName.getText(),
-                    Integer.parseInt(jtfQuantity.getText()),
-                    UtilitiesView.toformatPrice(Integer.parseInt(jtFUnitValue.getText())));
-        }else{
+            if (jtfQuantity.getText().length() <= 5 && jtFUnitValue.getText().length() <= 9){
+                return new Item(Integer.parseInt(jtFCode.getText()),jTName.getText(),
+                        Integer.parseInt(jtfQuantity.getText()),
+                        UtilitiesView.toformatPrice(Integer.parseInt(jtFUnitValue.getText())));
+            }
             return null;
         }
+        return null;
     }
 
     public String getAddressStore() {

@@ -1,8 +1,10 @@
 package view;
 
 import controller.Command;
+import javafx.scene.control.TextFormatter;
 import utilities.UtilitiesView;
 import view.model.JBModel;
+import view.model.JModelTextField;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,6 +18,8 @@ public class JPFooter extends JPanel {
     private JSpinner jsQuantity;
     private JBModel jBSell;
     private ArrayList<String> list;
+    private JModelTextField textDelete;
+    private JButton jbDelete;
 
     public JPFooter(ActionListener action) {
         GridLayout grid = new GridLayout(1,6);
@@ -58,7 +62,31 @@ public class JPFooter extends JPanel {
         jBSell = new JBModel(10,10,"Vender",Constant.C_DARK_RED,Color.white,Command.TO_SELL.toString(),action);
         this.add(jBSell);
 
+        textDelete = new JModelTextField("Eliminar:","Ej: 2-6",Constant.FONT_ARIAL_ROUNDER_15,Constant.C_WHITE);
+        textDelete.validateNum(textDelete);
+        this.add(textDelete);
+
+        jbDelete = new JBModel("Eliminar",Constant.IMG_ICON_DELETE,Constant.FONT_ARIAL_ROUNDER_15,15,15,Constant.C_WHITE,Constant.C_BLACK);
+        jbDelete.setActionCommand(Command.DELETE_RANG_ITEM.toString());
+        jbDelete.addActionListener(action);
+        this.add(jbDelete);
+
         setVisibility(false);
+    }
+
+    public int[] getDeleteString(){
+        String[] auxSplit = textDelete.getText().split("-");
+        if (auxSplit.length <= 2 && !auxSplit[0].isEmpty()){
+            return new int[]{Integer.parseInt(auxSplit[0]),Integer.parseInt(auxSplit[1])};
+        }
+        textDelete.setText("");
+        return null;
+    }
+
+    public void setVisibleDelete(boolean visible){
+        textDelete.setText("");
+        textDelete.setVisible(visible);
+        jbDelete.setVisible(visible);
     }
 
     public void fillList(ArrayList<String> list){
@@ -91,6 +119,8 @@ public class JPFooter extends JPanel {
         this.jCitemList.setVisible(visibility);
         jsQuantity.setVisible(visibility);
         jBSell.setVisible(visibility);
+        jbDelete.setVisible(visibility);
+        textDelete.setVisible(visibility);
     }
 
     public void setValues(double totalInventory,int totalSale){
@@ -101,4 +131,5 @@ public class JPFooter extends JPanel {
             this.totalSale.setText("Ultima venta:"+totalSale);
         }
     }
+
 }

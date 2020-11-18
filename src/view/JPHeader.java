@@ -1,6 +1,7 @@
 package view;
 
 import controller.Command;
+import view.model.JBModel;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -13,7 +14,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
 public class JPHeader extends JPanel {
     private JModelMenu jModelMenu;
     private JFormattedTextField jFormattedTextField;
-    private JButton jButton ,jbUpdate;
+    private JButton jButton ,jbUpdate,jbDelete;
     private JLabel jLNumberItems;
 
     public JPHeader(ActionListener action) {
@@ -50,7 +51,14 @@ public class JPHeader extends JPanel {
         jbUpdate.setBorder(BorderFactory.createEmptyBorder());
         jbUpdate.setPreferredSize(new Dimension(60,60));
         this.add(jbUpdate);
+
+        jbDelete = new JBModel("Eliminar",Constant.IMG_ICON_DELETE,Constant.FONT_ARIAL_ROUNDER_15,15,15,Constant.C_WHITE,Constant.C_BLACK);
+        jbDelete.setActionCommand(Command.SHOW_DELETE.toString());
+        jbDelete.addActionListener(action);
+        this.add(jbDelete);
+
         setVisibility(false);
+
     }
 
     public void setVisibility(boolean visibility){
@@ -60,6 +68,7 @@ public class JPHeader extends JPanel {
         jModelMenu.setVisibleButton(visibility);
         jbUpdate.setVisible(visibility);
         jLNumberItems.setVisible(visibility);
+        jbDelete.setVisible(visibility);
     }
 
     public String getSearchedCode(){
