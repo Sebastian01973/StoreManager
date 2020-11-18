@@ -59,8 +59,8 @@ public class JFMainWindow extends JFrame {
         jpMainPanel.showButtons(visibility);
     }
 
-    public void showDialogAddItem(boolean visibility){
-        jdAddItem.showDialog(visibility);
+    public void showDialogAddItem(boolean visibility, boolean isChange){
+        jdAddItem.showDialog(visibility, isChange);
     }
 
     public String getAddressStore(){

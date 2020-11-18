@@ -21,8 +21,12 @@ public class Store {
         itemList.insert(item);
     }
 
-    public void addItemShort(Item item){
-        itemList.insertInOrder(item);
+    public boolean addItemShort(Item item){
+        if (!itemList.exist(item)){
+            itemList.insertInOrder(item);
+            return true;
+        }
+        return false;
     }
 
     public Item createItem(int code,String name,int quantity,double unitValue){

@@ -73,11 +73,16 @@ public class JDAddItem extends JDialog {
 
     }
 
-    public void showDialog(boolean visible){
-        jTName.setText("");
-        jtfQuantity.setText("");
-        jtFUnitValue.setText("");
-        jtFCode.setText("");
+    public void showDialog(boolean visible, boolean isChange){
+        if (isChange){
+            jTName.setText("");
+            jtfQuantity.setText("");
+            jtFUnitValue.setText("");
+            jtFCode.setText("");
+            jtFCode.setForeground(Color.black);
+        }else{
+            jtFCode.setForeground(Constant.C_DARK_RED);
+        }
         this.setVisible(visible);
     }
 

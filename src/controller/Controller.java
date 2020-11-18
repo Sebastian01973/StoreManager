@@ -62,10 +62,10 @@ public class Controller implements ActionListener , MouseListener {
                 addItemToStore();
                 break;
             case CANCEL_CREATE_ITEM:
-                jfMainWindow.showDialogAddItem(false);
+                jfMainWindow.showDialogAddItem(false,true);
                 break;
             case ADD_ITEM:
-                jfMainWindow.showDialogAddItem(true);
+                jfMainWindow.showDialogAddItem(true,true);
                 break;
             case SEARCH:
                 searchItem();
@@ -94,14 +94,19 @@ public class Controller implements ActionListener , MouseListener {
         Store store = manageStores.searchStore(jfMainWindow.getAddressStore());
         Item item = (Item) jfMainWindow.getItem();
         if(store != null && item != null){
-            store.addItem(item);
-            addElementToTable(item.toObjectVector());
-            jfMainWindow.setNumberitems(store.getNumberItems());
+            if (store.addItemShort(item)){
+                addElementToTable(item.toObjectVector());
+                jfMainWindow.setNumberitems(store.getNumberItems());
+                refreshTable();
+                jfMainWindow.showDialogAddItem(false,true);
+            }else{
+                showMessageDialog(null,"El codigo del articulo ya existe en la lista, cambie el codigo");
+                jfMainWindow.showDialogAddItem(true,false);
+            }
         }else{
             showMessageDialog(null, "Hay datos Vacios por favor llenarlos todos");
-            jfMainWindow.showDialogAddItem(true);
+            jfMainWindow.showDialogAddItem(true,true);
         }
-        jfMainWindow.showDialogAddItem(false);
     }
 
     private void searchItem(){
