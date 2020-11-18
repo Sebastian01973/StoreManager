@@ -1,0 +1,602 @@
+[
+	{
+		"Code": "246",
+		"Units": 608,
+		"Price": "98780",
+		"Name": "guisos"
+	},
+	{
+		"Code": "566",
+		"Units": 97,
+		"Price": "88929",
+		"Name": "fideos"
+	},
+	{
+		"Code": "592",
+		"Units": 555,
+		"Price": "41182",
+		"Name": "guisos"
+	},
+	{
+		"Code": "858",
+		"Units": 949,
+		"Price": "51550",
+		"Name": "fideos"
+	},
+	{
+		"Code": "722",
+		"Units": 127,
+		"Price": "70871",
+		"Name": "pasta"
+	},
+	{
+		"Code": "866",
+		"Units": 170,
+		"Price": "3856",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "426",
+		"Units": 752,
+		"Price": "4730",
+		"Name": "pasta"
+	},
+	{
+		"Code": "576",
+		"Units": 838,
+		"Price": "97684",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "225",
+		"Units": 631,
+		"Price": "74604",
+		"Name": "pasta"
+	},
+	{
+		"Code": "791",
+		"Units": 90,
+		"Price": "39097",
+		"Name": "postres"
+	},
+	{
+		"Code": "513",
+		"Units": 138,
+		"Price": "6653",
+		"Name": "cereales"
+	},
+	{
+		"Code": "982",
+		"Units": 961,
+		"Price": "20361",
+		"Name": "sopas"
+	},
+	{
+		"Code": "521",
+		"Units": 15,
+		"Price": "79792",
+		"Name": "postres"
+	},
+	{
+		"Code": "348",
+		"Units": 349,
+		"Price": "4114",
+		"Name": "sopas"
+	},
+	{
+		"Code": "872",
+		"Units": 609,
+		"Price": "20283",
+		"Name": "cereales"
+	},
+	{
+		"Code": "505",
+		"Units": 298,
+		"Price": "8948",
+		"Name": "cereales"
+	},
+	{
+		"Code": "478",
+		"Units": 101,
+		"Price": "10320",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "239",
+		"Units": 694,
+		"Price": "41434",
+		"Name": "cereales"
+	},
+	{
+		"Code": "582",
+		"Units": 952,
+		"Price": "78631",
+		"Name": "pasta"
+	},
+	{
+		"Code": "331",
+		"Units": 893,
+		"Price": "60075",
+		"Name": "empanadas"
+	},
+	{
+		"Code": "003",
+		"Units": 520,
+		"Price": "62217",
+		"Name": "cereales"
+	},
+	{
+		"Code": "026",
+		"Units": 55,
+		"Price": "38743",
+		"Name": "guisos"
+	},
+	{
+		"Code": "387",
+		"Units": 325,
+		"Price": "43464",
+		"Name": "fideos"
+	},
+	{
+		"Code": "530",
+		"Units": 37,
+		"Price": "24943",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "403",
+		"Units": 239,
+		"Price": "90356",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "258",
+		"Units": 899,
+		"Price": "42275",
+		"Name": "cereales"
+	},
+	{
+		"Code": "354",
+		"Units": 692,
+		"Price": "49498",
+		"Name": "guisos"
+	},
+	{
+		"Code": "851",
+		"Units": 123,
+		"Price": "86013",
+		"Name": "pasta"
+	},
+	{
+		"Code": "522",
+		"Units": 654,
+		"Price": "89397",
+		"Name": "pasta"
+	},
+	{
+		"Code": "868",
+		"Units": 595,
+		"Price": "6527",
+		"Name": "guisos"
+	},
+	{
+		"Code": "206",
+		"Units": 509,
+		"Price": "85739",
+		"Name": "guisos"
+	},
+	{
+		"Code": "344",
+		"Units": 544,
+		"Price": "27893",
+		"Name": "pasta"
+	},
+	{
+		"Code": "075",
+		"Units": 666,
+		"Price": "34508",
+		"Name": "sopas"
+	},
+	{
+		"Code": "865",
+		"Units": 918,
+		"Price": "5120",
+		"Name": "pasta"
+	},
+	{
+		"Code": "492",
+		"Units": 271,
+		"Price": "58583",
+		"Name": "cereales"
+	},
+	{
+		"Code": "065",
+		"Units": 898,
+		"Price": "91643",
+		"Name": "postres"
+	},
+	{
+		"Code": "735",
+		"Units": 897,
+		"Price": "83069",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "510",
+		"Units": 619,
+		"Price": "52636",
+		"Name": "guisos"
+	},
+	{
+		"Code": "212",
+		"Units": 370,
+		"Price": "18305",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "973",
+		"Units": 541,
+		"Price": "51380",
+		"Name": "fideos"
+	},
+	{
+		"Code": "595",
+		"Units": 497,
+		"Price": "9723",
+		"Name": "cereales"
+	},
+	{
+		"Code": "958",
+		"Units": 727,
+		"Price": "83319",
+		"Name": "fideos"
+	},
+	{
+		"Code": "014",
+		"Units": 718,
+		"Price": "81914",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "005",
+		"Units": 340,
+		"Price": "28136",
+		"Name": "cereales"
+	},
+	{
+		"Code": "327",
+		"Units": 402,
+		"Price": "7785",
+		"Name": "postres"
+	},
+	{
+		"Code": "581",
+		"Units": 827,
+		"Price": "37179",
+		"Name": "mariscos"
+	},
+	{
+		"Code": "101",
+		"Units": 872,
+		"Price": "11133",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "154",
+		"Units": 107,
+		"Price": "38463",
+		"Name": "cereales"
+	},
+	{
+		"Code": "308",
+		"Units": 74,
+		"Price": "91379",
+		"Name": "mariscos"
+	},
+	{
+		"Code": "842",
+		"Units": 133,
+		"Price": "99200",
+		"Name": "postres"
+	},
+	{
+		"Code": "859",
+		"Units": 955,
+		"Price": "94358",
+		"Name": "postres"
+	},
+	{
+		"Code": "079",
+		"Units": 529,
+		"Price": "16843",
+		"Name": "cereales"
+	},
+	{
+		"Code": "930",
+		"Units": 929,
+		"Price": "63279",
+		"Name": "pasta"
+	},
+	{
+		"Code": "574",
+		"Units": 669,
+		"Price": "47808",
+		"Name": "cereales"
+	},
+	{
+		"Code": "812",
+		"Units": 475,
+		"Price": "1393",
+		"Name": "guisos"
+	},
+	{
+		"Code": "582",
+		"Units": 270,
+		"Price": "45875",
+		"Name": "fideos"
+	},
+	{
+		"Code": "394",
+		"Units": 476,
+		"Price": "34547",
+		"Name": "fideos"
+	},
+	{
+		"Code": "333",
+		"Units": 935,
+		"Price": "24180",
+		"Name": "empanadas"
+	},
+	{
+		"Code": "714",
+		"Units": 502,
+		"Price": "15660",
+		"Name": "postres"
+	},
+	{
+		"Code": "730",
+		"Units": 884,
+		"Price": "6318",
+		"Name": "pasta"
+	},
+	{
+		"Code": "280",
+		"Units": 460,
+		"Price": "1145",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "581",
+		"Units": 961,
+		"Price": "7556",
+		"Name": "postres"
+	},
+	{
+		"Code": "425",
+		"Units": 567,
+		"Price": "98501",
+		"Name": "empanadas"
+	},
+	{
+		"Code": "682",
+		"Units": 784,
+		"Price": "8310",
+		"Name": "mariscos"
+	},
+	{
+		"Code": "627",
+		"Units": 459,
+		"Price": "90691",
+		"Name": "guisos"
+	},
+	{
+		"Code": "657",
+		"Units": 193,
+		"Price": "89284",
+		"Name": "postres"
+	},
+	{
+		"Code": "091",
+		"Units": 391,
+		"Price": "39194",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "768",
+		"Units": 838,
+		"Price": "13598",
+		"Name": "cereales"
+	},
+	{
+		"Code": "727",
+		"Units": 416,
+		"Price": "2907",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "309",
+		"Units": 407,
+		"Price": "57984",
+		"Name": "sopas"
+	},
+	{
+		"Code": "616",
+		"Units": 449,
+		"Price": "50613",
+		"Name": "mariscos"
+	},
+	{
+		"Code": "480",
+		"Units": 375,
+		"Price": "90763",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "533",
+		"Units": 91,
+		"Price": "11838",
+		"Name": "postres"
+	},
+	{
+		"Code": "842",
+		"Units": 568,
+		"Price": "6703",
+		"Name": "guisos"
+	},
+	{
+		"Code": "998",
+		"Units": 663,
+		"Price": "26553",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "158",
+		"Units": 779,
+		"Price": "87576",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "572",
+		"Units": 557,
+		"Price": "22891",
+		"Name": "cereales"
+	},
+	{
+		"Code": "635",
+		"Units": 335,
+		"Price": "53612",
+		"Name": "empanadas"
+	},
+	{
+		"Code": "085",
+		"Units": 690,
+		"Price": "14103",
+		"Name": "sopas"
+	},
+	{
+		"Code": "455",
+		"Units": 159,
+		"Price": "39246",
+		"Name": "guisos"
+	},
+	{
+		"Code": "166",
+		"Units": 578,
+		"Price": "61148",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "828",
+		"Units": 469,
+		"Price": "5188",
+		"Name": "pasta"
+	},
+	{
+		"Code": "279",
+		"Units": 926,
+		"Price": "71594",
+		"Name": "ensaladas"
+	},
+	{
+		"Code": "500",
+		"Units": 282,
+		"Price": "34526",
+		"Name": "sopas"
+	},
+	{
+		"Code": "736",
+		"Units": 741,
+		"Price": "71362",
+		"Name": "postres"
+	},
+	{
+		"Code": "951",
+		"Units": 643,
+		"Price": "68138",
+		"Name": "empanadas"
+	},
+	{
+		"Code": "965",
+		"Units": 561,
+		"Price": "64914",
+		"Name": "pasta"
+	},
+	{
+		"Code": "498",
+		"Units": 219,
+		"Price": "31682",
+		"Name": "pasta"
+	},
+	{
+		"Code": "947",
+		"Units": 905,
+		"Price": "48999",
+		"Name": "empanadas"
+	},
+	{
+		"Code": "085",
+		"Units": 560,
+		"Price": "98776",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "799",
+		"Units": 957,
+		"Price": "39804",
+		"Name": "sopas"
+	},
+	{
+		"Code": "282",
+		"Units": 743,
+		"Price": "87229",
+		"Name": "sándwiches"
+	},
+	{
+		"Code": "015",
+		"Units": 228,
+		"Price": "1461",
+		"Name": "pasta"
+	},
+	{
+		"Code": "688",
+		"Units": 526,
+		"Price": "85743",
+		"Name": "fideos"
+	},
+	{
+		"Code": "940",
+		"Units": 965,
+		"Price": "31463",
+		"Name": "guisos"
+	},
+	{
+		"Code": "520",
+		"Units": 647,
+		"Price": "95474",
+		"Name": "fideos"
+	},
+	{
+		"Code": "618",
+		"Units": 859,
+		"Price": "46722",
+		"Name": "pasta"
+	},
+	{
+		"Code": "225",
+		"Units": 610,
+		"Price": "98031",
+		"Name": "guisos"
+	},
+	{
+		"Code": "441",
+		"Units": 371,
+		"Price": "76629",
+		"Name": "guisos"
+	},
+	{
+		"Code": "658",
+		"Units": 792,
+		"Price": "23607",
+		"Name": "postres"
+	}
+]
