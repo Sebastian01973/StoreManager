@@ -1,5 +1,7 @@
 package structures.doublyList;
 
+import structures.simpleList.Node;
+
 import java.util.Comparator;
 import java.util.Iterator;
 
@@ -22,6 +24,34 @@ public class DoubleList <T> implements Iterable<T>{
             }
             newNode.setPrevious(aux);
             aux.setNext(newNode);
+        }
+    }
+
+    public void insertShort(T data){
+        DoubleNode<T> newNode = new DoubleNode<T>(data);
+        if(isEmpty()){
+            head = newNode;
+        }else{
+            DoubleNode<T> aux = head;
+
+            if (comparator.compare(aux.getData(),newNode.getData()) > 0) {
+                newNode.setNext(aux);
+                aux.setPrevious(newNode);
+                head = newNode;
+            }else{
+                DoubleNode<T> current = head;
+                DoubleNode<T> previous = head;
+                while (comparator.compare(aux.getData(),newNode.getData()) <= 0 && current.getNext() != null){
+                    previous = current;
+                    current = current.getNext();
+                }
+                if (comparator.compare(aux.getData(),newNode.getData()) <= 0){
+                    newNode = current.getNext();
+                }else{
+                    current = newNode.getNext();
+                    newNode = previous.getNext();
+                }
+            }
         }
     }
 

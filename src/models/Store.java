@@ -21,6 +21,10 @@ public class Store {
         itemList.insert(item);
     }
 
+    public void addItemShort(Item item){
+        itemList.insertShort(item);
+    }
+
     public Item createItem(int code,String name,int quantity,double unitValue){
         return new Item(code,name,quantity,unitValue);
     }
@@ -117,5 +121,9 @@ public class Store {
             list.add(iterator.next().toString());
         }
         return list;
+    }
+
+    public String show(){
+        return itemList.showForward();
     }
 }
