@@ -7,9 +7,6 @@ import utilities.UtilitiesView;
 import view.Constant;
 import view.JFMainWindow;
 
-import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -94,7 +91,7 @@ public class Controller implements ActionListener , MouseListener {
         Store store = manageStores.searchStore(jfMainWindow.getAddressStore());
         Item item = (Item) jfMainWindow.getItem();
         if(store != null && item != null){
-            if (store.addItemShort(item)){
+            if (store.addSortItem(item)){
                 addElementToTable(item.toObjectVector());
                 jfMainWindow.setNumberitems(store.getNumberItems());
                 refreshTable();

@@ -21,7 +21,7 @@ public class Store {
         itemList.insert(item);
     }
 
-    public boolean addItemShort(Item item){
+    public boolean addSortItem(Item item){
         if (!itemList.exist(item)){
             itemList.insertInOrder(item);
             return true;
