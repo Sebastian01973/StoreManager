@@ -130,4 +130,21 @@ public class Store {
     public String show(){
         return itemList.showForward();
     }
+
+    public boolean removeInRange(int lower, int higher){
+        Item itemLower = searchItem(lower);
+        Item itemHighest = searchItem(higher);
+        if(itemHighest != null && itemLower != null){
+            Iterator<Item> iterator = itemList.iterator();
+            while (iterator.hasNext()){
+                Item itemAux = iterator.next();
+                int valueAux = itemAux.getCode();
+                if (valueAux >= lower && valueAux <= higher){
+                    itemList.remove(itemAux);
+                }
+            }
+            return true;
+        }
+        return false;
+    }
 }
