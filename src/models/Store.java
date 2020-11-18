@@ -22,7 +22,7 @@ public class Store {
     }
 
     public void addItemShort(Item item){
-        itemList.insertShort(item);
+        itemList.insertInOrder(item);
     }
 
     public Item createItem(int code,String name,int quantity,double unitValue){
