@@ -17,6 +17,7 @@ public class Constant {
     public static final Color C_DARK_RED = Color.decode("#751b1b");
     public static final Color C_DARK_GREEN = Color.decode("#0c5223");
     public static final Color C_BLUE_MID= Color.decode("#1e216b");
+    public static final Color C_WHITE= Color.decode("#ffffff");
 
     public static final Font FONT_ARIAL_ROUNDER_17 = new Font("Arial Rounded MT Bold", Font.PLAIN, 17);
     public static final Font FONT_ARIAL_ROUNDER_15 = new Font("Arial Rounded MT Bold", Font.PLAIN, 15);

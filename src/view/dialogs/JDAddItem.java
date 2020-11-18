@@ -5,6 +5,7 @@ import controller.Command;
 import models.Item;
 import utilities.UtilitiesView;
 import view.Constant;
+import view.model.JModelTextField;
 
 import javax.swing.*;
 import javax.swing.text.NumberFormatter;
@@ -13,9 +14,9 @@ import java.awt.event.ActionListener;
 
 public class JDAddItem extends JDialog {
     private JPanel container;
-    private JTextArea jTName;
+    private JModelTextField jTName;
     private JButton jBCreate,jBCancel;
-    private JFormattedTextField jtFUnitValue ,jtfQuantity,jtFCode;
+    private JModelTextField jtFUnitValue ,jtfQuantity,jtFCode;
     private String addressStore;
 
     public JDAddItem(ActionListener actionListener,Component component) {
@@ -36,20 +37,22 @@ public class JDAddItem extends JDialog {
         container.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
         container.setBackground(Color.white);
 
-        jTName = new JTextArea();
-        jTName.setBorder(BorderFactory.createTitledBorder("Nombre"));
+        jTName = new JModelTextField("Nombre del producto","Ingrese Nombre producto",Constant.FONT_ARIAL_ROUNDER_15,Constant.C_WHITE);
+        jTName.validateText(jTName);
         container.add(jTName);
-        jtFUnitValue = new JFormattedTextField();
-        jtfQuantity = new JFormattedTextField();
-        jtFCode = new JFormattedTextField();
 
-        jtFUnitValue.setBorder(BorderFactory.createTitledBorder("Valor por unidad"));
+        jtFUnitValue = new JModelTextField("Valor por unidad","Ingrese Unidades",Constant.FONT_ARIAL_ROUNDER_15,Constant.C_WHITE);
+        jtFUnitValue.validateNum(jtFUnitValue);
         container.add(jtFUnitValue);
-        jtfQuantity.setBorder(BorderFactory.createTitledBorder("Cantidad"));
+
+        jtfQuantity = new JModelTextField("Cantidad:","Ingrese Cantidad",Constant.FONT_ARIAL_ROUNDER_15,Constant.C_WHITE);
+        jtfQuantity.validateNum(jtfQuantity);
         container.add(jtfQuantity);
 
-        jtFCode.setBorder(BorderFactory.createTitledBorder("Codigo del producto"));
+        jtFCode = new JModelTextField("Codigo:","Ingrese Codigo",Constant.FONT_ARIAL_ROUNDER_15,Constant.C_WHITE);
+        jtFCode.validateNum(jtFCode);
         container.add(jtFCode);
+
         jBCreate = new JButton("Crear Articulo");
         jBCreate.setBackground(Constant.C_DARK_GREEN);
         jBCreate.setForeground(Color.white);
@@ -72,16 +75,24 @@ public class JDAddItem extends JDialog {
 
     public void showDialog(boolean visible){
         jTName.setText("");
-        jtFCode.setText("");
         jtfQuantity.setText("");
         jtFUnitValue.setText("");
+        jtFCode.setText("");
         this.setVisible(visible);
     }
 
+    public boolean isValidate(String name,String value,String unit,String code){
+        return (name.isEmpty() || value.isEmpty() || unit.isEmpty() || unit.isEmpty()) ? true:false;
+    }
+
     public Item createItem(){
-        return new Item(Integer.parseInt(jtFCode.getText()),jTName.getText(),
-                Integer.parseInt(jtfQuantity.getText()),
-                UtilitiesView.toformatPrice(Integer.parseInt(jtFUnitValue.getText())));
+        if (!isValidate(jTName.getText(),jtFCode.getText(),jtFUnitValue.getText(),jtfQuantity.getText())){
+            return new Item(Integer.parseInt(jtFCode.getText()),jTName.getText(),
+                    Integer.parseInt(jtfQuantity.getText()),
+                    UtilitiesView.toformatPrice(Integer.parseInt(jtFUnitValue.getText())));
+        }else{
+            return null;
+        }
     }
 
     public String getAddressStore() {

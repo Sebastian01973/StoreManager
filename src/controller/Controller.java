@@ -7,6 +7,7 @@ import utilities.UtilitiesView;
 import view.Constant;
 import view.JFMainWindow;
 
+import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
@@ -92,10 +93,13 @@ public class Controller implements ActionListener , MouseListener {
     private void addItemToStore(){
         Store store = manageStores.searchStore(jfMainWindow.getAddressStore());
         Item item = (Item) jfMainWindow.getItem();
-        if(store != null){
+        if(store != null && item != null){
             store.addItem(item);
             addElementToTable(item.toObjectVector());
             jfMainWindow.setNumberitems(store.getNumberItems());
+        }else{
+            showMessageDialog(null, "Hay datos Vacios por favor llenarlos todos");
+            jfMainWindow.showDialogAddItem(true);
         }
         jfMainWindow.showDialogAddItem(false);
     }
