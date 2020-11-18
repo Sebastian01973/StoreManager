@@ -27,11 +27,11 @@ public class TestAddOrder {
         test.addItemShort(p9);
         System.out.println("-------------");
         System.out.println(test.show());
-        System.out.println(test.removeInRange(2,6));
+        System.out.println(test.removeInRange(1,20));
         System.out.println(test.show());
         System.out.println(test.removeInRange(1,1));
         System.out.println(test.show());
-        System.out.println(test.removeInRange(15,20));
+        System.out.println(test.removeInRange(8,20));
         System.out.println(test.show());
     }
 }

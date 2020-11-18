@@ -142,6 +142,9 @@ public class Store {
                 if (valueAux >= lower && valueAux <= higher){
                     itemList.remove(itemAux);
                 }
+                if (valueAux == higher){
+                    return true;
+                }
             }
             return true;
         }
