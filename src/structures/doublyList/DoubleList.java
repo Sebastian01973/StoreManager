@@ -27,40 +27,6 @@ public class DoubleList <T> implements Iterable<T>{
         }
     }
 
-    public void insertInOrder(T data){
-        if (head == null){
-            head = new DoubleNode<>(data);
-        }else if (comparator.compare(head.getData(), data) > 0){
-            DoubleNode<T> auxNew = head;
-            head = new DoubleNode<>(data);
-            head.setNext(auxNew);
-            auxNew.setPrevious(head);
-        }else{
-            DoubleNode<T> auxNode = head;
-            DoubleNode<T> newNode = new DoubleNode<>(data);
-            DoubleNode<T> auxiliarNode = null;
-            boolean isFound = false;
-            while (auxNode != null && !isFound){
-                if (comparator.compare(auxNode.getData(),data) > 0){
-                    DoubleNode<T> auxPrevious = auxNode.getPrevious();
-                    newNode.setPrevious(auxPrevious);
-                    newNode.setNext(auxNode);
-                    auxNode.setPrevious(newNode);
-                    if (auxPrevious != null){
-                        auxPrevious.setNext(newNode);
-                    }
-                    isFound = true;
-                }
-                auxiliarNode = auxNode;
-                auxNode = auxNode.getNext();
-            }
-            if (auxiliarNode != null && !isFound){
-                newNode.setPrevious(auxiliarNode);
-                auxiliarNode.setNext(newNode);
-            }
-        }
-    }
-
     public String showForward(){
         String datas = "";
         DoubleNode<T> aux = head;
@@ -149,5 +115,39 @@ public class DoubleList <T> implements Iterable<T>{
     @Override
     public Iterator<T> iterator() {
         return new DoubleListIterator<>(head);
+    }
+
+    public void insertInOrder(T data){
+        if (head == null){
+            head = new DoubleNode<>(data);
+        }else if (comparator.compare(head.getData(), data) > 0){
+            DoubleNode<T> auxNew = head;
+            head = new DoubleNode<>(data);
+            head.setNext(auxNew);
+            auxNew.setPrevious(head);
+        }else{
+            DoubleNode<T> auxNode = head;
+            DoubleNode<T> newNode = new DoubleNode<>(data);
+            DoubleNode<T> auxiliarNode = null;
+            boolean isFound = false;
+            while (auxNode != null && !isFound){
+                if (comparator.compare(auxNode.getData(),data) > 0){
+                    DoubleNode<T> auxPrevious = auxNode.getPrevious();
+                    newNode.setPrevious(auxPrevious);
+                    newNode.setNext(auxNode);
+                    auxNode.setPrevious(newNode);
+                    if (auxPrevious != null){
+                        auxPrevious.setNext(newNode);
+                    }
+                    isFound = true;
+                }
+                auxiliarNode = auxNode;
+                auxNode = auxNode.getNext();
+            }
+            if (auxiliarNode != null && !isFound){
+                newNode.setPrevious(auxiliarNode);
+                auxiliarNode.setNext(newNode);
+            }
+        }
     }
 }
